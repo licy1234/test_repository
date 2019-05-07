@@ -115,6 +115,14 @@ class Test_Equ(unittest.TestCase):
 		except BaseException as e:
 			print('签到接口异常了',str(e))
 
+	def test_jifen1(self):                #积分签到
+		try:
+			url = self.url + '/webUser/center/signIn/singIn'          
+			response = s.post(url,verify=False)
+			print('积分签到:',response.text)
+		except BaseException as e:
+			print('签到接口异常了',str(e))
+
 if __name__ == '__main__':
 	unittest.main()
 
